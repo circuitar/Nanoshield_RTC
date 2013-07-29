@@ -1,0 +1,24 @@
+# Datatypes (KEYWORD1)
+
+# Methods and Functions (KEYWORD2)
+start KEYWORD2
+stop KEYWORD2
+write KEYWORD2
+writeSeconds KEYWORD2
+writeMinutes KEYWORD2
+writeHours KEYWORD2
+writeDay KEYWORD2
+writeWeekday KEYWORD2
+writeMonth KEYWORD2
+writeYear KEYWORD2
+read KEYWORD2
+getTime KEYWORD2
+getSeconds KEYWORD2
+getMinutes KEYWORD2
+getHours KEYWORD2
+getDay KEYWORD2
+getWeekday KEYWORD2
+getMonth KEYWORD2
+getYear KEYWORD2
+
+# Constants (LITERAL1)
