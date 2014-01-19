@@ -1,5 +1,5 @@
 /*
-This a simple serial port clock application using the RTC Nanoshield.
+This a simple clock application using the RTC Nanoshield and the LCD Nanoshield.
 
 Copyright (c) 2013 Circuitar
 This software is released under the MIT license. See the attached LICENSE file for details.
@@ -8,8 +8,10 @@ This software is released under the MIT license. See the attached LICENSE file f
 #include <Wire.h>
 #include <stdio.h>
 #include "Nanoshield_RTC.h"
+#include "Nanoshield_LCD.h"
 
 Nanoshield_RTC rtc;
+Nanoshield_LCD lcd;
 
 #define BUFFER_SIZE 50
 char buf[BUFFER_SIZE];
@@ -19,14 +21,21 @@ char time[9];
 void setup()
 {
   Serial.begin(115200);
-  Serial.println("-------------------------");
-  Serial.println(" Nanoshield Serial Clock");
-  Serial.println("-------------------------");
+  Serial.println("----------------------");
+  Serial.println(" Nanoshield LCD Clock");
+  Serial.println("----------------------");
   Serial.println("");
 
+  // Initialize LCD
+  lcd.begin();
+  lcd.clear();
+  lcd.print("Initializing...");
+  
   // Initialize RTC
   if (!rtc.begin()) {
     Serial.println("Failed starting RTC");
+    lcd.clear();
+    lcd.print("Cannot start RTC");
     while(true);
   };
 
@@ -49,6 +58,8 @@ void setup()
       setTime(rtc, buf);
     }
   }
+
+  lcd.clear();
 }
 
 void loop()
@@ -63,6 +74,12 @@ void loop()
   Serial.print(" ");
   Serial.println(time);
   
+  // Print time in the LCD
+  lcd.setCursor(0, 0);
+  lcd.print(date);
+  lcd.setCursor(0, 1);
+  lcd.print(time);
+
   // Wait for next second
   delay(1000);
 }
