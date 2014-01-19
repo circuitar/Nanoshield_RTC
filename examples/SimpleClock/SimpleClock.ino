@@ -8,10 +8,10 @@ This software is released under the MIT license. See the attached LICENSE file f
 #include <Wire.h>
 #include <stdio.h>
 #include "Nanoshield_RTC.h"
-#include "Deuligne.h"
+#include "Nanoshield_LCD.h"
 
 Nanoshield_RTC rtc;
-Deuligne lcd;
+Nanoshield_LCD lcd;
 
 #define BUFFER_SIZE 50
 char buf[BUFFER_SIZE];
@@ -27,7 +27,7 @@ void setup()
   Serial.println("");
 
   // Initialize LCD
-  lcd.init();
+  lcd.begin();
   lcd.clear();
   lcd.print("Initializing...");
   
