@@ -8,7 +8,12 @@ This software is released under the MIT license. See the attached LICENSE file f
 #ifndef NANOSHIELD_RTC_h
 #define NANOSHIELD_RTC_h
 
-#include "Arduino.h"
+#ifdef ARDUPI
+	#include "arduPi.h"
+#else
+	#include "Arduino.h"
+	#include <Wire.h>
+#endif
 
 #define NANOSHIELD_RTC_CLKOUT_32768_HZ 0
 #define NANOSHIELD_RTC_CLKOUT_1024_HZ  1
