@@ -1,9 +1,10 @@
-/*
-This is the library to access the DS1307 RTC IC
-
-Copyright (c) 2013 Circuitar
-This software is released under the MIT license. See the attached LICENSE file for details.
-*/
+/**
+ * @file DS1307.cpp
+ * This is the library to access the DS1307 RTC IC
+ * 
+ * Copyright (c) 2013 Circuitar
+ * This software is released under the MIT license. See the attached LICENSE file for details.
+ */
 
 #include "Arduino.h"
 #include <Wire.h>

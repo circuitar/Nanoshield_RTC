@@ -1,9 +1,10 @@
-/*
-This a simple serial port clock application using the RTC Nanoshield.
-
-Copyright (c) 2013 Circuitar
-This software is released under the MIT license. See the attached LICENSE file for details.
-*/
+/**
+ * @file SimpleClock.ino
+ * This a simple serial port clock application using the RTC Nanoshield.
+ * 
+ * Copyright (c) 2013 Circuitar
+ * This software is released under the MIT license. See the attached LICENSE file for details.
+ */
 
 #include <Wire.h>
 #include <stdio.h>
