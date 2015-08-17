@@ -5,7 +5,7 @@ This is the Arduino software library to access the RTC functionality of the RTCM
 
 * Source code: https://github.com/circuitar/Nanoshield_RTC
 * Documentation: http://nanoshield-rtc.readthedocs.org/
-* Reference board: `Nanoshield RTCMen`_ from Circuitar_
+* Reference board: `Nanoshield RTCMem`_ from Circuitar_
 
 Library features include:
 
@@ -21,8 +21,8 @@ The following examples_ are provided:
 - SimpleClock_ serial port clock application using the RTC Nanoshield.
 - SimpleClockLCD_ clock application using the RTC Nanoshield and the LCD Nanoshield.
 
-.. _`Nanoshield RTCMem`: https://www.circuitar.com.br/nanoshields/modulos/rtcmem/
-.. _Circuitar: https://www.circuitar.com.br/
+.. _`Nanoshield RTCMem`: https://www.circuitar.com/nanoshields/modules/rtcmem/
+.. _Circuitar: https://www.circuitar.com/
 .. _examples: https://github.com/circuitar/Nanoshield_RTC/tree/master/examples
 .. _SimpleClock: https://github.com/circuitar/Nanoshield_RTC/blob/master/examples/SimpleClock/SimpleClock.ino
 .. _SimpleClockLCD: https://github.com/circuitar/Nanoshield_RTC/blob/master/examples/SimpleClockLCD/SimpleClockLCD.ino

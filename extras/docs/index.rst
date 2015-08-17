@@ -11,8 +11,8 @@ Class Documentation
    :project: Nanoshield_RTC
    :members:
 
-.. doxygenclass:: Nanoshield_RTCPlus
-   :project: Nanoshield_RTC
+.. doxygenclass:: DS3231
+   :project: DS3231
    :members:
 
 .. doxygenclass:: Nanoshield_RTC

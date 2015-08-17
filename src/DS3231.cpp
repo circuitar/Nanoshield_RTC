@@ -1,5 +1,5 @@
 /**
- * @file Nanoshield_RTCPlus.cpp
+ * @file DS3231.cpp
  * This is the library to access the RTCPlus Nanoshield
  * 
  * Copyright (c) 2013 Circuitar
@@ -8,9 +8,9 @@
 
 #include "Arduino.h"
 #include <Wire.h>
-#include "Nanoshield_RTCPlus.h"
+#include "DS3231.h"
 
-Nanoshield_RTCPlus::Nanoshield_RTCPlus() {
+DS3231::DS3231() {
   i2cAddr = 0x68;
   secondsAddr = 0x00;
   minutesAddr = 0x01;
@@ -21,7 +21,7 @@ Nanoshield_RTCPlus::Nanoshield_RTCPlus() {
   yearAddr = 0x06;
 }
 
-bool Nanoshield_RTCPlus::begin(uint8_t clkout)
+bool DS3231::begin(uint8_t clkout)
 {
   // Initiate the Wire library and join the I2C bus as a master
   Wire.begin();
@@ -35,7 +35,7 @@ bool Nanoshield_RTCPlus::begin(uint8_t clkout)
   return Wire.endTransmission() == 0;
 }
 
-bool Nanoshield_RTCPlus::start()
+bool DS3231::start()
 {
   // DS3231 is always running when powered by VCC, so keep this
   // function here just for backwards compatibility with the
@@ -43,7 +43,7 @@ bool Nanoshield_RTCPlus::start()
   return true;
 }
 
-bool Nanoshield_RTCPlus::stop()
+bool DS3231::stop()
 {
   // DS3231 is always running when powered by VCC, so keep this
   // function here just for backwards compatibility with the
@@ -51,7 +51,7 @@ bool Nanoshield_RTCPlus::stop()
   return true;
 }
 
-bool Nanoshield_RTCPlus::write(int sec, int min, int hour, int day, int wday, int mon, int year)
+bool DS3231::write(int sec, int min, int hour, int day, int wday, int mon, int year)
 {
   Wire.beginTransmission(i2cAddr);
   Wire.write(secondsAddr);            // Start address
@@ -69,13 +69,13 @@ bool Nanoshield_RTCPlus::write(int sec, int min, int hour, int day, int wday, in
   return Wire.endTransmission() == 0;
 }
 
-bool Nanoshield_RTCPlus::writeWeekday(int wday)
+bool DS3231::writeWeekday(int wday)
 {
   // Number of days on DS3231 are 1-7 instead of 0-6
   return Nanoshield_RTC::writeWeekday(wday + 1);
 }
 
-bool Nanoshield_RTCPlus::read()
+bool DS3231::read()
 {
   int century = 0;
 
