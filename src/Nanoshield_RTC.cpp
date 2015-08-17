@@ -1,9 +1,10 @@
-/*
-This is the library to access the RTC Nanoshield
-
-Copyright (c) 2013 Circuitar
-This software is released under the MIT license. See the attached LICENSE file for details.
-*/
+/**
+ * @file Nanoshield_RTC.cpp
+ * This is the library to access the RTC Nanoshield
+ * 
+ * Copyright (c) 2013 Circuitar
+ * This software is released under the MIT license. See the attached LICENSE file for details.
+ */
 
 #include "Nanoshield_RTC.h"
 

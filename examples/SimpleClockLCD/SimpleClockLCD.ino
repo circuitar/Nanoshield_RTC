@@ -1,9 +1,10 @@
-/*
-This a simple clock application using the RTC Nanoshield and the LCD Nanoshield.
-
-Copyright (c) 2013 Circuitar
-This software is released under the MIT license. See the attached LICENSE file for details.
-*/
+/**
+ * @file SimpleClockLCD.ino
+ * This a simple clock application using the RTC Nanoshield and the LCD Nanoshield.
+ * 
+ * Copyright (c) 2013 Circuitar
+ * This software is released under the MIT license. See the attached LICENSE file for details.
+ */
 
 #include <Wire.h>
 #include <stdio.h>
