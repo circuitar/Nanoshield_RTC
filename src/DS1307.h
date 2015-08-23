@@ -10,14 +10,14 @@
 #define DS1307_h
 
 #include "Arduino.h"
-#include "Nanoshield_RTCPlus.h"
+#include "DS3231.h"
 
 #define DS1307_CLKOUT_1_HZ     0
 #define DS1307_CLKOUT_4096_HZ  1
 #define DS1307_CLKOUT_8192_HZ  2
 #define DS1307_CLKOUT_32768_HZ 3
 
-class DS1307: public Nanoshield_RTCPlus {
+class DS1307: public DS3231 {
   public:
     /**
      * @brief Initializes the DS1307 object.
