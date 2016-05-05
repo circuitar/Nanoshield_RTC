@@ -41,7 +41,7 @@ void setup()
   Serial.println(time);
   Serial.println("Press Enter to adjust the time");
   Serial.setTimeout(3000);
-  if (Serial.find("\n")) {
+  if (Serial.find((char*)"\n")) {
     Serial.setTimeout(99999);
     Serial.println("Type the new time in the format above and press Enter");
     Serial.println("Press only Enter if you want to keep the same time");
