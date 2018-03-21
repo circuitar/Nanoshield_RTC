@@ -1,7 +1,7 @@
 /**
  * @file SimpleClock.ino
  * This a simple serial port clock application using the RTC Nanoshield.
- * 
+ *
  * Copyright (c) 2013 Circuitar
  * This software is released under the MIT license. See the attached LICENSE file for details.
  */
@@ -40,6 +40,8 @@ void setup()
   Serial.print(" ");
   Serial.println(time);
   Serial.println("Press Enter to adjust the time");
+  Serial.println("If you are using the Arduino serial monitor, select 'Newline' at the bottom");
+  Serial.println("right, place the cursor inside the text box at the top and press Enter.");
   Serial.setTimeout(3000);
   if (Serial.find((char*)"\n")) {
     Serial.setTimeout(99999);
@@ -63,7 +65,7 @@ void loop()
   Serial.print(date);
   Serial.print(" ");
   Serial.println(time);
-  
+
   // Wait for next second
   delay(1000);
 }
@@ -72,7 +74,7 @@ void setTime(Nanoshield_RTC& rtc, char* time) {
   char *p = time;
   char *tok;
   int year, mon, day, hour, min, sec;
-  
+
   tok = strtok_r(p, "-", &p);
   year = atoi(tok);
   tok = strtok_r(p, "-", &p);
@@ -88,7 +90,7 @@ void setTime(Nanoshield_RTC& rtc, char* time) {
 
   sprintf(buf, "New time: %04d-%02d-%02d %02d:%02d:%02d", year, mon, day, hour, min, sec);
   Serial.println(buf);
-  
+
   rtc.writeYear(year);
   rtc.writeMonth(mon);
   rtc.writeDay(day);
@@ -96,4 +98,3 @@ void setTime(Nanoshield_RTC& rtc, char* time) {
   rtc.writeMinutes(min);
   rtc.writeSeconds(sec);
 }
-
