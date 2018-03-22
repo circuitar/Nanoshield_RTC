@@ -1,7 +1,7 @@
 /*
-This a simple serial port clock application using the RTC Nanoshield.
+This a simple application to set the current time for the RTC Nanoshield.
 
-Copyright (c) 2013 Circuitar
+Copyright (c) 2017 Circuitar
 This software is released under the MIT license. See the attached LICENSE file for details.
 */
 
@@ -31,9 +31,7 @@ void setup()
     while(true);
   };
 
-  // Print current time and ask for the new time
   Serial.print("Current time:\n");
-  rtc.read();
   
   // Set date and time
   rtc.writeYear(2018);
