@@ -21,8 +21,8 @@ The following examples_ are provided:
 - SimpleClock_ serial port clock application using the RTC Nanoshield.
 - SimpleClockLCD_ clock application using the RTC Nanoshield and the LCD Nanoshield.
 
-.. _`Nanoshield RTCMem`: https://www.circuitar.com/nanoshields/modules/rtcmem/
-.. _Circuitar: https://www.circuitar.com/
+.. _`Nanoshield RTCMem`: https://www.circuitar.com.br/nanoshields/modulos/rtcmem/
+.. _Circuitar: https://www.circuitar.com.br/
 .. _examples: https://github.com/circuitar/Nanoshield_RTC/tree/master/examples
 .. _SimpleClock: https://github.com/circuitar/Nanoshield_RTC/blob/master/examples/SimpleClock/SimpleClock.ino
 .. _SimpleClockLCD: https://github.com/circuitar/Nanoshield_RTC/blob/master/examples/SimpleClockLCD/SimpleClockLCD.ino
